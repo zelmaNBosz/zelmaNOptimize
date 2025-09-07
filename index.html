@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimize by Zelman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+        }
+        .header-bg {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #ff0000;
+        }
+        .btn-primary {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+        }
+        .btn-primary:hover {
+            background-color: #e60000;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+        }
+        .card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .overlay-container {
+            position: relative;
+            z-index: 10;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.05));
+            border-radius: 12px;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        .card:hover .overlay {
+            opacity: 1;
+        }
+        .card-content {
+            position: relative;
+            z-index: 20;
+            padding: 2rem;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#2c2c2c 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="header-bg py-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="text-2xl font-bold text-red-500">Optimize by Zelman</div>
+            <nav>
+                <a href="#services" class="text-gray-300 hover:text-red-500 transition-colors duration-300 mx-4">Servicii</a>
+                <a href="#about" class="text-gray-300 hover:text-red-500 transition-colors duration-300 mx-4">Despre Noi</a>
+                <a href="#contact" class="text-gray-300 hover:text-red-500 transition-colors duration-300 mx-4">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
+                <span class="text-red-500">Maximizează</span> Performanța Sistemului Tău
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                Soluții complete de optimizare pentru PC-ul tău, de la diagnosticare la setări avansate pentru gaming.
+            </p>
+            <a href="#contact" class="inline-block btn-primary rounded-full uppercase tracking-wider text-sm">
+                Contactează-ne
+            </a>
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-white mb-16">Serviciile Noastre</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card 1: Optimizare generală și soluționare probleme -->
+                <div class="card relative overlay-container">
+                    <div class="overlay"></div>
+                    <div class="card-content">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Rezolvarea problemelor și stabilitate</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Diagnosticare și soluționare a problemelor comune.</li>
+                            <li>Optimizarea stabilității procesoarelor Intel 13th/14th Gen și AMD.</li>
+                            <li>Tuning sigur (Overclocking/Undervolting) pentru CPU/GPU.</li>
+                            <li>Overclocking RAM cu setări personalizate.</li>
+                            <li>Testare completă (temperaturi, stabilitate, FPS, latență).</li>
+                            <li>Suport continuu.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Configurare software și hardware -->
+                <div class="card relative overlay-container">
+                    <div class="overlay"></div>
+                    <div class="card-content">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Configurarea sistemului</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Instalare curată a Windows-ului.</li>
+                            <li>Optimizarea setărilor Windows și BIOS.</li>
+                            <li>Configurare software necesară.</li>
+                            <li>Setări pentru mouse și tastatură.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Optimizare Gaming, Audio & Network -->
+                <div class="card relative overlay-container">
+                    <div class="overlay"></div>
+                    <div class="card-content">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Optimizări pentru Gaming</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Setări personalizate pentru jocuri.</li>
+                            <li>Optimizarea setărilor audio.</li>
+                            <li>Optimizarea rețelei pentru latență redusă.</li>
+                            <li>Configurarea pentru înregistrare și streaming (OBS).</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black py-8 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto text-center px-6">
+            <h3 class="text-xl font-bold text-white mb-4">Contactează-ne</h3>
+            <p class="text-gray-500 mb-2">Email: contact@zelmanoptimize.ro</p>
+            <p class="text-500 mb-6">Telefon: +40 7xx xxx xxx</p>
+            <p class="text-gray-600 text-sm">&copy; 2024 Optimize by Zelman. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
